@@ -1,0 +1,22 @@
+<br/><br/>
+
+<div class="container"> 
+  <h3>Consuming HTTP Services Example:</h3> 
+  <br/>
+  <label for="myPostName">Enter new post name:</label>
+  <input
+    (keyup.enter)="createPost(title)"
+    id="myPostName"
+    #title
+    type="text" class="form-control">
+
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let post of posts">  
+      <button (click)="updatePost(post)"class="btn btn-default btn-sm btn-success">Update</button>
+      <button (click)="deletePost(post)"class="btn btn-default btn-sm btn-danger">Delete</button>
+      {{post.title}}
+    </li>
+    
+  </ul>
+</div>
+

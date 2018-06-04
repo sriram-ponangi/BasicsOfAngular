@@ -1,0 +1,12 @@
+<br/><br/>
+
+<div class="container"> 
+  <div>
+    github-profile works! #id={{id}}
+    <br/><h6>Note:</h6>
+    New component is not created only the route parametes are changed.
+  </div>
+  <button type="button" class="btn btn-primary" [routerLink]="['/GithubFollowers',1234,sriram]">NEXT</button>
+  <button type="button" class="btn btn-primary" routerLink="/GithubFollowers">BACK</button>
+  <button type="button" class="btn btn-warning" (click)="programaticNavigator()">Programatic Navigation</button>
+</div>

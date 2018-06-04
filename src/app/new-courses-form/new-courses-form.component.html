@@ -1,0 +1,22 @@
+<br/><br/>
+
+<div class="container">
+  <h3>Adding new Topics with FormArray:</h3>
+  <form>
+    <label for="topic">Topic name:</label>
+    <input 
+    type="text" 
+    class="form-control"
+    id="topic"
+    (keyup.enter)="addTopic(topic)"
+    #topic>
+    <ul class="list-group">
+      <li
+      (click)="removeTopic(topic)" 
+      *ngFor="let topic of topics.controls"
+      class="list-group-item">
+    {{topic.value}}
+    </li>
+    </ul>
+  </form>
+</div>
